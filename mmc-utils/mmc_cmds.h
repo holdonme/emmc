@@ -1,0 +1,44 @@
+/* mmc_cmds.c */
+int do_read_extcsd(int nargs, char **argv);
+int do_write_extcsd(int nargs, char **argv);
+int do_writeprotect_get(int nargs, char **argv);
+int do_writeprotect_set(int nargs, char **argv);
+int do_userarea_writeprotect_get(int nargs, char **argv);
+int do_userarea_writeprotect_set(int nargs, char **argv);
+int do_disable_512B_emulation(int nargs, char **argv);
+int do_write_boot_en(int nargs, char **argv);
+int do_write_bkops_en(int nargs, char **argv);
+int do_hwreset_en(int nargs, char **argv);
+int do_hwreset_dis(int nargs, char **argv);
+int do_sanitize(int nargs, char **argv);
+int do_status_get(int nargs, char **argv);
+int do_enh_area_set(int nargs, char **argv);
+int power_off_notification(int nargs, char **argv);
+int do_go_idle(int nargs, char **argv);
+int do_send_op_cond(int nargs, char **argv);
+int do_all_send_cid(int nargs, char **argv);
+int do_set_dsr(int nargs, char **argv);
+int do_sleep_awake(int nargs, char **argv);
+int do_decode_extcsd(int nargs, char **argv);
+int do_config_extcsd(int nargs, char **argv);
+int do_select_deselect_card(int nargs, char **argv);
+int do_send_stop(int nargs, char **argv);
+int do_send_csd(int nargs, char **argv);
+int do_send_cid(int nargs, char **argv);
+int do_single_read(int nargs, char **argv);
+int do_multiple_read(int nargs, char **argv);
+int do_single_write(int nargs, char **argv);
+int do_multiple_write(int nargs, char **argv);
+int do_get_bad_block_general_info(int nargs, char **argv);
+int do_get_detail_ec(int nargs, char **argv);
+int do_ffu(int nargs, char **argv);
+int do_cache_enable(int nargs, char **argv);
+int do_cache_flush(int nargs, char **argv);
+int do_cache_disable(int nargs, char **argv);
+int do_print_state_diagram(int nargs, char **argv);
+int do_get_general_ec_info(int nargs, char **argv);
+int do_get_SSR(int nargs, char **argv);
+int do_set_air(int nargs, char **argv);
+int do_set_uir(int nargs, char **argv);
+
+#define DO_WRITEPROTECT_GET_USAGE "<device>\nDetermine the eMMC write protect status of <device>."

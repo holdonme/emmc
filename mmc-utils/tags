@@ -1,0 +1,213 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.6	//
+ADVANCED_HELP	mmc.c	11;"	d	file:
+BASIC_HELP	mmc.c	10;"	d	file:
+BKOPS_ENABLE	mmc.h	90;"	d
+BLOCK_SIZE	mmc_cmds.c	18;"	d	file:
+CC	Makefile	/^CC=gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-Wall -Wundef -Wuninitialized -O4 -g$/;"	m
+CHECK	mmc.h	5;"	d
+CROSS_COMPILE	Makefile	/^CROSS_COMPILE=\/home\/blair\/CodeSourcery\/Sourcery_CodeBench_Lite_for_Xilinx_GNU_Linux\/bin\/arm-xilinx-linux-gnueabi-$/;"	m
+Command	mmc.c	/^struct Command {$/;"	s	file:
+CommandFunction	mmc.c	/^typedef int (*CommandFunction)(int argc, char **argv);$/;"	t	file:
+DO_WRITEPROTECT_GET_USAGE	mmc_cmds.h	41;"	d
+EN_REL_WR	mmc.h	85;"	d
+EXT_CSD_BKOPS_EN	mmc.h	62;"	d
+EXT_CSD_BKOPS_SUPPORT	mmc.h	48;"	d
+EXT_CSD_BOOT_CFG	mmc.h	55;"	d
+EXT_CSD_BOOT_CFG_ACC	mmc.h	107;"	d
+EXT_CSD_BOOT_CFG_ACK	mmc.h	105;"	d
+EXT_CSD_BOOT_CFG_EN	mmc.h	106;"	d
+EXT_CSD_BOOT_INFO	mmc.h	49;"	d
+EXT_CSD_BOOT_INFO_ALT	mmc.h	104;"	d
+EXT_CSD_BOOT_INFO_DDR_DDR	mmc.h	103;"	d
+EXT_CSD_BOOT_INFO_HS_MODE	mmc.h	102;"	d
+EXT_CSD_BOOT_WP	mmc.h	58;"	d
+EXT_CSD_BOOT_WP_B_PERM_WP_DIS	mmc.h	99;"	d
+EXT_CSD_BOOT_WP_B_PERM_WP_EN	mmc.h	100;"	d
+EXT_CSD_BOOT_WP_B_PWR_WP_DIS	mmc.h	98;"	d
+EXT_CSD_BOOT_WP_B_PWR_WP_EN	mmc.h	101;"	d
+EXT_CSD_CMD_SET_NORMAL	mmc.h	97;"	d
+EXT_CSD_DATA_SECTOR_SIZE	mmc.h	76;"	d
+EXT_CSD_ENH_ATTRIBUTE_EN	mmc.h	117;"	d
+EXT_CSD_ENH_SIZE_MULT_0	mmc.h	69;"	d
+EXT_CSD_ENH_SIZE_MULT_1	mmc.h	68;"	d
+EXT_CSD_ENH_SIZE_MULT_2	mmc.h	67;"	d
+EXT_CSD_ENH_START_ADDR_0	mmc.h	73;"	d
+EXT_CSD_ENH_START_ADDR_1	mmc.h	72;"	d
+EXT_CSD_ENH_START_ADDR_2	mmc.h	71;"	d
+EXT_CSD_ENH_START_ADDR_3	mmc.h	70;"	d
+EXT_CSD_ENH_USR	mmc.h	118;"	d
+EXT_CSD_ERASE_GROUP_DEF	mmc.h	57;"	d
+EXT_CSD_FFU_STATUS	mmc.h	79;"	d
+EXT_CSD_FFU_STATUS_DOWNLOAD_ERROR	mmc.h	130;"	d
+EXT_CSD_FFU_STATUS_GENERAL_ERROR	mmc.h	128;"	d
+EXT_CSD_FFU_STATUS_INSTALL_ERROR	mmc.h	129;"	d
+EXT_CSD_HPI_FEATURE	mmc.h	47;"	d
+EXT_CSD_HPI_IMPL	mmc.h	96;"	d
+EXT_CSD_HPI_SUPP	mmc.h	95;"	d
+EXT_CSD_HW_RESET_DIS	mmc.h	110;"	d
+EXT_CSD_HW_RESET_EN	mmc.h	109;"	d
+EXT_CSD_MODE_CONFIG	mmc.h	78;"	d
+EXT_CSD_MODE_CONFIG_FFU	mmc.h	126;"	d
+EXT_CSD_MODE_CONFIG_NORMAL	mmc.h	125;"	d
+EXT_CSD_NATIVE_SECTOR_SIZE	mmc.h	74;"	d
+EXT_CSD_NO_POWER_NOTIFICATION	mmc.h	120;"	d
+EXT_CSD_PARTITIONING_EN	mmc.h	116;"	d
+EXT_CSD_PARTITIONING_SUPPORT	mmc.h	64;"	d
+EXT_CSD_PARTITIONS_ATTRIBUTE	mmc.h	65;"	d
+EXT_CSD_PARTITION_SETTING_COMPLETED	mmc.h	66;"	d
+EXT_CSD_PART_CONFIG	mmc.h	56;"	d
+EXT_CSD_PART_CONFIG_ACC_ACK	mmc.h	115;"	d
+EXT_CSD_PART_CONFIG_ACC_BOOT0	mmc.h	112;"	d
+EXT_CSD_PART_CONFIG_ACC_BOOT1	mmc.h	113;"	d
+EXT_CSD_PART_CONFIG_ACC_MASK	mmc.h	111;"	d
+EXT_CSD_PART_CONFIG_ACC_USER_AREA	mmc.h	114;"	d
+EXT_CSD_PART_SWITCH_TIME	mmc.h	54;"	d
+EXT_CSD_POWERED_ON	mmc.h	121;"	d
+EXT_CSD_POWER_OFF_LONG	mmc.h	123;"	d
+EXT_CSD_POWER_OFF_NOTIFICATION	mmc.h	77;"	d
+EXT_CSD_POWER_OFF_SHORT	mmc.h	122;"	d
+EXT_CSD_RST_N_EN_MASK	mmc.h	108;"	d
+EXT_CSD_RST_N_FUNCTION	mmc.h	63;"	d
+EXT_CSD_SANITIZE_START	mmc.h	61;"	d
+EXT_CSD_SEC_COUNT_0	mmc.h	53;"	d
+EXT_CSD_SEC_COUNT_1	mmc.h	52;"	d
+EXT_CSD_SEC_COUNT_2	mmc.h	51;"	d
+EXT_CSD_SEC_COUNT_3	mmc.h	50;"	d
+EXT_CSD_S_CMD_SET	mmc.h	46;"	d
+EXT_CSD_USER_WP	mmc.h	59;"	d
+EXT_CSD_USE_NATIVE_SECTOR	mmc.h	75;"	d
+EXT_CSD_WR_REL_PARAM	mmc.h	60;"	d
+HELP_ALL	mmc.c	12;"	d	file:
+HS_CTRL_REL	mmc.h	84;"	d
+LOCAL_MODULE	Android.mk	/^LOCAL_MODULE := mmc_utils$/;"	m
+LOCAL_MODULE_PATH	Android.mk	/^LOCAL_MODULE_PATH := $(TARGET_OUT_DATA)\/mmc-utils$/;"	m
+LOCAL_MODULE_TAGS	Android.mk	/^LOCAL_MODULE_TAGS := optional$/;"	m
+LOCAL_PATH	Android.mk	/^LOCAL_PATH:= $(call my-dir)$/;"	m
+LOCAL_SHARED_LIBRARIES	Android.mk	/^LOCAL_SHARED_LIBRARIES := libcutils libc$/;"	m
+LOCAL_SRC_FILES	Android.mk	/^LOCAL_SRC_FILES:= mmc.c mmc_cmds.c$/;"	m
+MMC_ALL_SEND_CID	mmc.h	19;"	d
+MMC_BLOCK_MAJOR	mmc.h	8;"	d
+MMC_CMD_AC	mmc.h	139;"	d
+MMC_CMD_ADTC	mmc.h	140;"	d
+MMC_CMD_BC	mmc.h	141;"	d
+MMC_CMD_BCR	mmc.h	142;"	d
+MMC_GEN_CMD	mmc.h	41;"	d
+MMC_GO_IDLE_STATE	mmc.h	17;"	d
+MMC_READ_MULTIPLE_BLOCK	mmc.h	34;"	d
+MMC_READ_SINGLE_BLOCK	mmc.h	33;"	d
+MMC_RSP_136	mmc.h	134;"	d
+MMC_RSP_BUSY	mmc.h	136;"	d
+MMC_RSP_CRC	mmc.h	135;"	d
+MMC_RSP_OPCODE	mmc.h	137;"	d
+MMC_RSP_PRESENT	mmc.h	133;"	d
+MMC_RSP_R1	mmc.h	151;"	d
+MMC_RSP_R1B	mmc.h	152;"	d
+MMC_RSP_R2	mmc.h	154;"	d
+MMC_RSP_R3	mmc.h	158;"	d
+MMC_RSP_SPI_BUSY	mmc.h	146;"	d
+MMC_RSP_SPI_R1	mmc.h	148;"	d
+MMC_RSP_SPI_R1B	mmc.h	149;"	d
+MMC_RSP_SPI_R2	mmc.h	156;"	d
+MMC_RSP_SPI_S1	mmc.h	144;"	d
+MMC_RSP_SPI_S2	mmc.h	145;"	d
+MMC_SELECT_DESELECT_CARD	mmc.h	24;"	d
+MMC_SEND_CID	mmc.h	27;"	d
+MMC_SEND_CSD	mmc.h	26;"	d
+MMC_SEND_EXT_CSD	mmc.h	25;"	d
+MMC_SEND_OP_COND	mmc.h	18;"	d
+MMC_SEND_STATUS	mmc.h	12;"	d
+MMC_SET_BLOCKLEN	mmc.h	32;"	d
+MMC_SET_DSR	mmc.h	21;"	d
+MMC_SET_RELATIVE_ADDR	mmc.h	20;"	d
+MMC_SLEEP_AWAKE	mmc.h	22;"	d
+MMC_STOP_TRANSMISSION	mmc.h	28;"	d
+MMC_SWITCH	mmc.h	23;"	d
+MMC_SWITCH_MODE_WRITE_BYTE	mmc.h	14;"	d
+MMC_VERSION	mmc.c	8;"	d	file:
+MMC_WRITE_MULTIPLE_BLOCK	mmc.h	38;"	d
+MMC_WRITE_SINGLE_BLOCK	mmc.h	37;"	d
+R1_SWITCH_ERROR	mmc.h	13;"	d
+_GNU_SOURCE	mmc.c	1;"	d	file:
+adv_help	mmc.c	/^        char    *adv_help;      \/* advanced help message; from the 2nd line $/;"	m	struct:Command	file:
+check_ambiguity	mmc.c	/^static int check_ambiguity(struct Command *cmd, char **argv){$/;"	f	file:
+cmds	mmc.c	/^	char	**cmds;		\/* array of subcommands *\/$/;"	m	struct:Command	file:
+commands	mmc.c	/^static struct Command commands[] = {$/;"	v	typeref:struct:Command	file:
+decode_cbx	mmc_cmds.c	/^const char *decode_cbx(int number){$/;"	f
+decode_ecsd	mmc_cmds.c	/^int decode_ecsd(__u8* data, __u8 rev){$/;"	f
+do_all_send_cid	mmc_cmds.c	/^int do_all_send_cid(int nargs, char **argv)$/;"	f
+do_config_extcsd	mmc_cmds.c	/^int do_config_extcsd(int nargs, char **argv)$/;"	f
+do_decode_extcsd	mmc_cmds.c	/^int do_decode_extcsd(int nargs, char **argv)$/;"	f
+do_disable_512B_emulation	mmc_cmds.c	/^int do_disable_512B_emulation(int nargs, char **argv)$/;"	f
+do_enh_area_set	mmc_cmds.c	/^int do_enh_area_set(int nargs, char **argv)$/;"	f
+do_ffu	mmc_cmds.c	/^int do_ffu(int nargs, char **argv)$/;"	f
+do_get_SSR	mmc_cmds.c	/^int do_get_SSR(int nargs, char **argv)$/;"	f
+do_get_bad_block_general_info	mmc_cmds.c	/^int do_get_bad_block_general_info(int nargs, char **argv)$/;"	f
+do_get_detail_ec	mmc_cmds.c	/^int do_get_detail_ec(int nargs, char **argv)$/;"	f
+do_get_general_ec_info	mmc_cmds.c	/^int do_get_general_ec_info(int nargs, char **argv)$/;"	f
+do_go_idle	mmc_cmds.c	/^int do_go_idle(int nargs, char **argv)$/;"	f
+do_hwreset	mmc_cmds.c	/^static int do_hwreset(int value, int nargs, char **argv)$/;"	f	file:
+do_hwreset_dis	mmc_cmds.c	/^int do_hwreset_dis(int nargs, char **argv)$/;"	f
+do_hwreset_en	mmc_cmds.c	/^int do_hwreset_en(int nargs, char **argv)$/;"	f
+do_multiple_read	mmc_cmds.c	/^int do_multiple_read(int nargs, char **argv)$/;"	f
+do_multiple_write	mmc_cmds.c	/^int do_multiple_write(int nargs, char **argv)$/;"	f
+do_print_state_diagram	mmc_cmds.c	/^int do_print_state_diagram(int nargs, char **argv)$/;"	f
+do_read_extcsd	mmc_cmds.c	/^int do_read_extcsd(int nargs, char **argv)$/;"	f
+do_sanitize	mmc_cmds.c	/^int do_sanitize(int nargs, char **argv)$/;"	f
+do_select_deselect_card	mmc_cmds.c	/^int do_select_deselect_card(int nargs, char **argv)$/;"	f
+do_send_cid	mmc_cmds.c	/^int do_send_cid(int nargs, char **argv)$/;"	f
+do_send_csd	mmc_cmds.c	/^int do_send_csd(int nargs, char **argv)$/;"	f
+do_send_op_cond	mmc_cmds.c	/^int do_send_op_cond(int nargs, char **argv)$/;"	f
+do_send_stop	mmc_cmds.c	/^int do_send_stop(int nargs, char **argv)$/;"	f
+do_set_air	mmc_cmds.c	/^int do_set_air(int nargs, char **argv)$/;"	f
+do_set_dsr	mmc_cmds.c	/^int do_set_dsr(int nargs, char **argv)$/;"	f
+do_set_uir	mmc_cmds.c	/^int do_set_uir(int nargs, char **argv)$/;"	f
+do_single_read	mmc_cmds.c	/^int do_single_read(int nargs, char **argv)$/;"	f
+do_single_write	mmc_cmds.c	/^int do_single_write(int nargs, char **argv)$/;"	f
+do_sleep_awake	mmc_cmds.c	/^int do_sleep_awake(int nargs, char **argv)$/;"	f
+do_status_get	mmc_cmds.c	/^int do_status_get(int nargs, char **argv)$/;"	f
+do_userarea_writeprotect_get	mmc_cmds.c	/^int do_userarea_writeprotect_get(int nargs, char **argv)$/;"	f
+do_write	mmc_cmds.c	/^static int do_write(int fd, int opcode, __u32 arg, void * data_in, __u32 len)$/;"	f	file:
+do_write_bkops_en	mmc_cmds.c	/^int do_write_bkops_en(int nargs, char **argv)$/;"	f
+do_write_boot_en	mmc_cmds.c	/^int do_write_boot_en(int nargs, char **argv)$/;"	f
+do_writeprotect_get	mmc_cmds.c	/^int do_writeprotect_get(int nargs, char **argv)$/;"	f
+do_writeprotect_set	mmc_cmds.c	/^int do_writeprotect_set(int nargs, char **argv)$/;"	f
+dump_cid	mmc_cmds.c	/^uint dump_cid(__u32 *data){$/;"	f
+dump_csd	mmc_cmds.c	/^void dump_csd(__u32 *data){$/;"	f
+func	mmc.c	/^	CommandFunction	func;	\/* function which implements the command *\/$/;"	m	struct:Command	file:
+g_cbx	mmc_cmds.c	/^static const char g_cbx[5][10]={"Card\\0","BGA\/MCP\\0","POP\\0","RESERVED\\0","INVALID\\0"};$/;"	v	file:
+get_hc_erase_grp_size	mmc_cmds.c	/^static unsigned int get_hc_erase_grp_size(__u8 *ext_csd)$/;"	f	file:
+get_hc_wp_grp_size	mmc_cmds.c	/^static unsigned int get_hc_wp_grp_size(__u8 *ext_csd)$/;"	f	file:
+get_prgname	mmc.c	/^static char *get_prgname(char *programname)$/;"	f	file:
+get_sector_count	mmc_cmds.c	/^static unsigned int get_sector_count(__u8 *ext_csd)$/;"	f	file:
+help	mmc.c	/^	char	*help;		\/* help lines; from the 2nd line onward they $/;"	m	struct:Command	file:
+help	mmc.c	/^static void help(char *np)$/;"	f	file:
+hex2int	mmc_cmds.c	/^uint hex2int(const char * ch){$/;"	f
+is_blockaddresed	mmc_cmds.c	/^static int is_blockaddresed(__u8 *ext_csd)$/;"	f	file:
+lib_get_offset	mmc_cmds.c	/^__u32 lib_get_offset(__u32 data, int offset, int bit_len){$/;"	f
+main	mmc.c	/^int main(int ac, char **av )$/;"	f
+mmc_read_health_status	mmc_cmds.c	/^static int mmc_read_health_status(int fd, __u32 arg, __u8 *buf)$/;"	f	file:
+mmc_write_health_status	mmc_cmds.c	/^static int mmc_write_health_status(int fd, __u32 arg, __u8 *buf)$/;"	f	file:
+nargs	mmc.c	/^	int	nargs;		\/* if == 999, any number of arguments$/;"	m	struct:Command	file:
+ncmds	mmc.c	/^	int	ncmds;		\/* number of subcommand *\/$/;"	m	struct:Command	file:
+num_convert	mmc_cmds.c	/^uint num_convert(char ch)$/;"	f
+objects	Makefile	/^objects=mmc.o mmc_cmds.o$/;"	m
+p_err	mmc_cmds.c	/^void p_err(char* err_buf, char* file, int line)$/;"	f
+parse_args	mmc.c	/^static int parse_args(int argc, char **argv,$/;"	f	file:
+power_off_notification	mmc_cmds.c	/^int power_off_notification(int nargs, char **argv)$/;"	f
+prepare_args	mmc.c	/^static int prepare_args(int *ac, char ***av, char *prgname, struct Command *cmd ){$/;"	f	file:
+print_help	mmc.c	/^static void print_help(char *programname, struct Command *cmd, int helptype)$/;"	f	file:
+print_userarea_writeprotect_status	mmc_cmds.c	/^static void print_userarea_writeprotect_status(__u8 *ext_csd)$/;"	f	file:
+print_writeprotect_status	mmc_cmds.c	/^static void print_writeprotect_status(__u8 *ext_csd)$/;"	f	file:
+read_extcsd	mmc_cmds.c	/^static int read_extcsd(int fd, __u8 *ext_csd)$/;"	f	file:
+send_status	mmc_cmds.c	/^static int send_status(int fd, __u8 hpi, __u32 *resp)$/;"	f	file:
+send_stop	mmc_cmds.c	/^static int send_stop(int fd, __u8 hpi, __u32 *resp)$/;"	f	file:
+split_command	mmc.c	/^static int split_command(char *cmd, char ***commands)$/;"	f	file:
+valid_digit	mmc_cmds.c	/^uint valid_digit(const char * ch){$/;"	f
+verb	mmc.c	/^	char	*verb;		\/* verb *\/$/;"	m	struct:Command	file:
+write_extcsd_value	mmc_cmds.c	/^static int write_extcsd_value(int fd, __u8 index, __u8 value)$/;"	f	file:
