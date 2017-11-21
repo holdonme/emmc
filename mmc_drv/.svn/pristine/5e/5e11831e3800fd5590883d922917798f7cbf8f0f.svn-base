@@ -1,0 +1,12 @@
+KERNELDIR ?= ../linux-xlnx-3.14
+PWD := $(shell pwd)
+
+obj-m := mmc_drv.o
+mmc_drv-objs := mmc_char.o 
+
+modules:
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
+	mv mmc_drv.ko /nfsroot/orion/
+
+clean:
+	rm -rf *.ko *.o *.mod.o *.mod.c *.symvers modules.order .*.cmd .tmp_versions

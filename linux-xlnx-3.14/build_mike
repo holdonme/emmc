@@ -1,0 +1,11 @@
+#!/bin/bash -x
+#make ARCH=arm C=0 CROSS_COMPILE=/root/CodeSourcery/Sourcery_CodeBench_Lite_for_Xilinx_GNU_Linux/bin/arm-xilinx-linux-gnueabi- -j 8 zImage
+make ARCH=arm C=0 CROSS_COMPILE=/home/mike/CodeSourcery/Sourcery_CodeBench_Lite_for_Xilinx_GNU_Linux/bin/arm-xilinx-linux-gnueabi- -j 8 uImage LOADADDR=0x8000
+#make ARCH=arm C=0 CROSS_COMPILE=/root/CodeSourcery/Sourcery_CodeBench_Lite_for_Xilinx_GNU_Linux/bin/arm-xilinx-linux-gnueabi- -j 8 modules
+make ARCH=arm C=0 CROSS_COMPILE=/home/mike/CodeSourcery/Sourcery_CodeBench_Lite_for_Xilinx_GNU_Linux/bin/arm-xilinx-linux-gnueabi- -j 8 zynq-zed.dtb
+
+#rm /tftpboot/devicetree.dtb
+#rm /tftpboot/uImage
+
+#mv ./arch/arm/boot/dts/zynq-zed.dtb /tftpboot/devicetree.dtb
+#mv ./arch/arm/boot/uImage /tftpboot/uImage

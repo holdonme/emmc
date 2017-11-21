@@ -1,0 +1,5 @@
+1053:		card->state &= ~MMC_CARD_REMOVED;
+1064:			part_card->state &= ~MMC_CARD_REMOVED;
+2424:				if( host->mrq->cmd->arg + host->mrq->data->blocks == host->mmc->card->ext_csd.sectors) { 
+2429:				else if( host->mrq->cmd->arg + host->mrq->data->blocks == host->mmc->card->part[0].size >> 9) { 
+2457:		#if 1 // leonwang add 2014-12-17 to avoid using mmc_card->state

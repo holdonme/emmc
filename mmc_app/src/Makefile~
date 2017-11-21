@@ -1,0 +1,32 @@
+F_LIBDIR := ../flash_lib/
+NFS_DIR  := /home/mike/nfs/bin
+GCC := /home/mike/CodeSourcery/Sourcery_CodeBench_Lite_for_Xilinx_GNU_Linux/bin/arm-xilinx-linux-gnueabi-gcc
+CFLAG := -Wall -O4 -I$(F_LIBDIR)
+
+obj_lib := $(F_LIBDIR)flash_lib.o $(F_LIBDIR)flash_ops.o
+obj_bin := power.o power_loss_config.o \
+mmcconfig.o mmcrandread.o mmcrandwrite.o \
+cmd0.o cmd1.o cmd2.o cmd3.o cmd5.o cmd6.o cmd7.o cmd8.o cmd9.o cmd10.o cmd12.o cmd13.o cmd14.o \
+cmd15.o cmd16.o cmd17.o cmd18.o cmd19.o cmd21.o cmd23.o cmd24.o cmd25.o cmd35.o cmd36.o cmd38.o cmd55.o cmd56.o cmd60.o \
+cmd32.o cmd33.o cmd61.o cmd62.o cmd63.o mstar.o dump_reg.o huawei.o samsung.o run_script.o \
+sd_acmd41.o sd_cmd8.o sd_cmd3.o sd_acmd6.o sd_cmd56.o sd_cmd20.o sd_cmd42.o sd_huawei.o sd_cmd11.o fpga_reg_ctrl.o sd_config.o
+
+target := $(obj_bin:%.o=%)
+
+all:$(target)
+
+$(target) : %: %.o $(obj_lib)
+	$(GCC) -o $@ $< $(obj_lib)
+	cp $@ ../bin/
+//	cp $@ $(NFS_DIR)
+
+$(obj_lib) : %.o : %.c $(F_LIBDIR)mmc-user.h
+	$(GCC) $(CFLAG) -c $< -o $@
+
+$(obj_bin) : %.o: %.c
+	$(GCC) $(CFLAG) -c $< -o $@
+	
+
+clean:
+	rm -rf $(obj_lib) $(obj_bin) $(target)
+	rm -rf ../bin/*

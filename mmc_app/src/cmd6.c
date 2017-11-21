@@ -1,0 +1,106 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
+#include <time.h>
+
+#include "flash_define.h"
+#include "flash_lib.h"
+#include "flash_ops.h"
+#include "mmc-user.h"
+
+extern char *optarg;
+extern int optind;
+
+void help_menu()
+{
+	printf("Usage: cmd6 -m MODE -a ADDR -d DATA [-t]   or\n");
+	printf("       cmd6 -v REG_VALUE [-t]\n\n");
+	printf("Options:\n");
+	printf("\t-m   register field access mode:\n");
+	printf("\t        0 command set\n");
+	printf("\t        1 set bits\n") ;
+	printf("\t        2 clear bits\n"); 
+	printf("\t        3 write byte\n");
+	printf("\t                    \n");
+	printf("\t-a   register field address\n");
+	printf("\t-d   register field value\n");
+	printf("\t-v   register value\n");
+	printf("\t-t   show command time\n");
+}
+
+
+int main(int argc, char * const argv[])
+{
+	int c;
+	struct emmc_sndcmd_req mmc_cmd;
+	struct r1 r1_res;
+	uint32_t flag = FLAG_NOCMDTIME;
+
+	uint32_t mode = 3;
+	uint32_t addr = 0;
+	uint32_t data = 0;
+	
+	int use_field = 1;
+	uint32_t reg_value = 0;
+
+	while(optind<argc){
+		c = getopt(argc, argv,"m:a:d:v:th");
+		switch(c){
+			case 'm':                               //access
+				mode=lib_valid_digit(optarg); 
+				break;
+			case 'a':                               //index 
+				addr=lib_valid_digit(optarg); 
+				break;
+			case 'd':                               //value 
+				data=lib_valid_digit(optarg); 
+				break;
+			case 't':                               //time flag 
+				flag = 0;
+				break;
+			case 'v':
+				use_field = 0;
+				reg_value = lib_valid_digit(optarg);
+				break;
+			case 'h':
+			default: 
+				help_menu();
+				return -1;
+		}
+	}
+
+	if(use_field)
+		reg_value = (data<<8)|(addr<<16)|(mode<<24);
+
+	if (flashops->open() < 0)
+		return -1;
+
+	lib_build_cmd(&mmc_cmd,6,reg_value,NULL,NULL,0,0,flag);
+
+	BEGINTIMER;	
+
+	if(flashops->cmd(&mmc_cmd)<0)
+		return -1;
+
+	GETTIMER;
+	printf("test\n");
+	PRINTTIMER;
+	r1_res=lib_r1_check(mmc_cmd.restoken);
+
+	if(r1_res.error) {
+		printf("Cmd6 failed. Error code: 0x%x\n",r1_res.error);
+		return -1;
+	}
+
+	printf("Response status 0x%x %s\n",r1_res.sts,lib_decode_status(r1_res.sts));
+
+	if(flag != FLAG_NOCMDTIME)
+		PRINTTIMER;
+
+	flashops->close();
+
+	return 0;
+}
