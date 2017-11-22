@@ -53,7 +53,8 @@
 #define EMMC_MISC_SR                0x1C
 #define EMMC_SUB_VERSION			0x78
 #define EMMC_VERSION				0x7C
-
+//add HW_RESET by michael
+#define EMMC_HW_RESET 				0x20
 /*
  * AXI_SLAVE_CMD	Base addr 0x7AB0_0000
  */
@@ -607,6 +608,7 @@ int xilinx_dump_reg(struct xilinx_emmc_host *host, void *arg)
 	mmc_drv = container_of(drv, struct mmc_driver, drv);
 	
 	if(option == 0){
+		printk(" EMMC_CMD_BASE          %08x\n" , readl( host->cmd_reg));   
 		printk(" EMMC_CMD_ARGUMENT          %08x\n" , readl( host->cmd_reg + EMMC_CMD_ARGUMENT));   
 		printk(" EMMC_CMD_INDEX             %08x\n" , readl( host->cmd_reg + EMMC_CMD_INDEX)   );
 		printk(" EMMC_CMD_RESP0             %08x\n" , readl( host->cmd_reg + EMMC_CMD_RESP0) 	);
@@ -624,6 +626,7 @@ int xilinx_dump_reg(struct xilinx_emmc_host *host, void *arg)
 		printk(" EMMC_RESISTOR              %08x\n" , readl( host->misc_reg + EMMC_RESISTOR)    );  
 		printk(" EMMC_TIME                  %08x\n" , readl( host->misc_reg + EMMC_TIME)        );  
 		printk(" EMMC_MISC_SR               %08x\n" , readl( host->misc_reg + EMMC_MISC_SR)     );  
+		printk(" EMMC_HW_RESET               %08x\n" , readl( host->misc_reg + EMMC_HW_RESET)     );  
 		printk("\n");
 		printk(" EMMC_WR_BLK_CNT            %08x\n" , readl( host->wr_reg + EMMC_WR_BLK_CNT)    );
 		printk(" EMMC_WR_SR                 %08x\n" , readl( host->wr_reg + EMMC_WR_SR     )    );
@@ -721,7 +724,13 @@ int xilinx_dump_reg(struct xilinx_emmc_host *host, void *arg)
 	}
 	else if(option == 11){
 		xilinx_set_bus_width(host->mmc, value[0]);
+	//added by michael, if option == 12, pull down RST_n; if option == 13 pull up RST_n	
+	}else if (option == 12){
+		writel(0,host->misc_reg+EMMC_HW_RESET);
+	}else if(option == 13){
+		writel(1,host->misc_reg+EMMC_HW_RESET);
 	}
+		
 	
 	return 0;
 }
@@ -2846,10 +2855,15 @@ static int __init xilinx_emmc_probe(struct platform_device *pdev)
 	setup_timer(&host->timer, xilinx_timeout_timer, (unsigned long)host);
 
 	host->dma_reg  = ioremap(res0->start, resource_size(res0));
+	printk("dma_reg start address is: 0x%x\n",res0->start);
 	host->misc_reg = ioremap(res1->start, resource_size(res1));
+	printk("misc_reg start address is: 0x%x\n",res1->start);
 	host->cmd_reg  = ioremap(res2->start, resource_size(res2));
+	printk("cmd_reg start address is: 0x%x\n",res2->start);
 	host->wr_reg   = ioremap(res3->start, resource_size(res3));
+	printk("wr_reg start address is: 0x%x\n",res3->start);
 	host->rd_reg   = ioremap(res4->start, resource_size(res4));
+	printk("rd_reg start address is: 0x%x\n",res4->start);
 
 	if (!host->dma_reg || !host->misc_reg || !host->cmd_reg || !host->wr_reg || !host->rd_reg) {
 		dev_err(dev, "memory map error!\n");

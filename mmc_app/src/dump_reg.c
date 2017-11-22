@@ -17,7 +17,10 @@ extern int optind;
 void help_menu()
 {
 	printf("Usage: dump_reg\n\n");
-	printf("test\n\n");
+	printf("-a 0 ------- dump all register values\n\n");
+	printf("-a 12 ------- pull down RST_n\n\n");
+	printf("-a 13 ------- pull up RST_n\n\n");
+	
 }
 
 int main(int argc, char * const argv[])
