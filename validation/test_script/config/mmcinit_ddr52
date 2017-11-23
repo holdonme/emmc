@@ -1,0 +1,22 @@
+echo "###MMC init start###"
+echo "CMD0"
+cmd0
+echo "CMD1"
+cmd1
+echo "CMD2"
+cmd2
+echo "CMD3 CID"
+cmd3
+echo "CMD9 CSD"
+cmd9 #csd read
+echo "CMD7"
+cmd7
+echo "CMD6 set x8 IO"
+cmd6 -m3 -a183 -d2 #setup x8 io
+mmcconfig -i8 #config host x8 io
+echo "CMD6 set HS_TIMING"
+cmd6 -m1 -a185 #setup HS_TIMING
+mmcconfig -f52000 #config clk
+echo "CMD8 XCSD"
+cmd8
+echo "###MMC init end###"

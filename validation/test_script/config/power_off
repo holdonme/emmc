@@ -1,0 +1,9 @@
+
+
+echo "[info]============================>random write with chunk size=2k partition size=1G"
+randwrite_addralign4k -s 0 -e 2097151 -c 4 -d 0xa5 -n 2000 -t 
+echo "[info]============================>power off"
+power -a 0 -t 1000
+
+
+
